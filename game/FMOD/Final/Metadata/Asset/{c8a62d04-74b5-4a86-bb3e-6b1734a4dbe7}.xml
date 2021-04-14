@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="EncodableAsset" id="{c8a62d04-74b5-4a86-bb3e-6b1734a4dbe7}">
+		<property name="assetPath">
+			<value>Pudding Jump/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{1d5aed7b-2c65-4958-ab8d-6f0568ed88a1}</destination>
+		</relationship>
+	</object>
+</objects>
