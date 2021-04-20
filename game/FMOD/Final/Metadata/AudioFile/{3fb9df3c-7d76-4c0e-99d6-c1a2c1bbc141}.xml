@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{3fb9df3c-7d76-4c0e-99d6-c1a2c1bbc141}">
+		<property name="assetPath">
+			<value>Pudding Jump/Inter_Sound/Shoot_2.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>0.07317460317460317</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{1d5aed7b-2c65-4958-ab8d-6f0568ed88a1}</destination>
+		</relationship>
+	</object>
+</objects>

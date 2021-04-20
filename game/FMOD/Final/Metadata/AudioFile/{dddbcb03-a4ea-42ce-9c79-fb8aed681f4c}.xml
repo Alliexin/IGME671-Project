@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{dddbcb03-a4ea-42ce-9c79-fb8aed681f4c}">
+		<property name="assetPath">
+			<value>Pudding Jump/BGMs/subBGM-glued.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>20.008185941043084</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{1d5aed7b-2c65-4958-ab8d-6f0568ed88a1}</destination>
+		</relationship>
+	</object>
+</objects>

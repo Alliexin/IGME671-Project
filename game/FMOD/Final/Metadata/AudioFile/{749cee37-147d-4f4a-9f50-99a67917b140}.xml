@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{749cee37-147d-4f4a-9f50-99a67917b140}">
+		<property name="assetPath">
+			<value>Pudding Jump/Inter_Sound/Jumpping.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>0.28891156462585033</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{1d5aed7b-2c65-4958-ab8d-6f0568ed88a1}</destination>
+		</relationship>
+	</object>
+</objects>
