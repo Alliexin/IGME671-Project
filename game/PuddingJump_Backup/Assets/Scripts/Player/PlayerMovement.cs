@@ -4,6 +4,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions.Must;
 
+using FMODUnity;
+using FMOD.Studio;
+
 public class PlayerMovement : MonoBehaviour
 {
     //Singleton
@@ -30,8 +33,9 @@ public class PlayerMovement : MonoBehaviour
 
     public float gravity;
 
-
-
+    [FMODUnity.EventRef]
+    public string path;
+    EventInstance jumpSound;
 
     public bool no_gravity;
     public bool control_is_disabled;
@@ -62,6 +66,8 @@ public class PlayerMovement : MonoBehaviour
         CameraMovement.current.pos = new Vector3(CameraMovement.current.pos.x, CameraMovement.current.height, -10);
 
         addForce(new Vector2(0, 800));
+
+        jumpSound = RuntimeManager.CreateInstance(path);
     }
 
     // Update is called once per frame
@@ -143,6 +149,8 @@ public class PlayerMovement : MonoBehaviour
         //Reset stats
         jumpForce = baseJumpForce;
         jumpVel = baseJumpVel;
+
+        jumpSound.start();
     }
 
     void warp()
