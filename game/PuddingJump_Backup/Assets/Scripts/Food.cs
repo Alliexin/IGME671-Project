@@ -1,16 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMODUnity;
+using FMOD.Studio;
 
 public class Food : Collectable
 {
     public Vector3 dir;
+
+    [FMODUnity.EventRef]
+    public string path;
+    EventInstance collectionSound;
 
     public override void Collected()
     {
         if (!isCollected)
         {
             isCollected = true;
+            collectionSound.start();
             EventSystem.current.PlayerEatFood();
             LeanTween.pause(gameObject);
             LeanTween.scale(gameObject, new Vector3(0.1f, 0.1f, 1), 0.5f).setEaseInBounce().setOnComplete(Deactivate);
@@ -23,6 +30,7 @@ public class Food : Collectable
         spd = 0;
         ChangeSprite();
         LeanTween.scale(gameObject, new Vector3(0.42f, 0.42f, 1f), 1f).setLoopPingPong();
+        collectionSound = RuntimeManager.CreateInstance(path);
     }
 
     // Update is called once per frame

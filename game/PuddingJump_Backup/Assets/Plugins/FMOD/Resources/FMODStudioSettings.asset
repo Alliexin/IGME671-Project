@@ -456,8 +456,8 @@ MonoBehaviour:
   SwitchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: ../IGME671-Project/game/FMOD/Final/Final.fspro
-  sourceBankPath: ..\IGME671-Project\game\FMOD\Final\Build
+  sourceProjectPath: ../FMOD/Final/Final.fspro
+  sourceBankPath: ..\FMOD\Final\Build
   SourceBankPathUnformatted: 
   AutomaticEventLoading: 1
   BankLoadType: 0
@@ -476,7 +476,8 @@ MonoBehaviour:
   VirtualChannelSettings: []
   RealChannelSettings: []
   Plugins: []
-  MasterBanks: []
+  MasterBanks:
+  - Master
   Banks: []
   BanksToLoad: []
   LiveUpdatePort: 9264

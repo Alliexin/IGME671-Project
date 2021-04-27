@@ -13,6 +13,9 @@ public class ObjectManager : MonoBehaviour
 
     private static ObjectManager instance;
 
+    [Header("Menu")]
+    public GameObject menu;
+
     [Header("Prefabs")]
 
     public GameObject normalBlockPrefab;
@@ -104,6 +107,13 @@ public class ObjectManager : MonoBehaviour
             ResetGame();
             InitPosition();
         }
+    }
+
+    public void Begin()
+    {
+        menu.SetActive(false);
+        ResetGame();
+        InitPosition();
     }
 
     void CheckToSpawn()

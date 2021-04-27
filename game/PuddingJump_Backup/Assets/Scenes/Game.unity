@@ -628,6 +628,7 @@ GameObject:
   - component: {fileID: 368795893}
   - component: {fileID: 368795895}
   - component: {fileID: 368795894}
+  - component: {fileID: 368795896}
   m_Layer: 5
   m_Name: Play
   m_TagString: Untagged
@@ -651,9 +652,9 @@ RectTransform:
   m_Father: {fileID: 1851624243}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 4126, y: -896}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 828, y: 1792}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &368795894
@@ -693,6 +694,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 368795892}
   m_CullTransparentMesh: 0
+--- !u!114 &368795896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 368795892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff98529f72a9bdc498000f947b414672, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  path: event:/musics/UIs/mainButton
 --- !u!1 &378461409
 GameObject:
   m_ObjectHideFlags: 0
@@ -725,8 +739,8 @@ RectTransform:
   m_Father: {fileID: 1884953941}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.000000059171267, y: 0}
-  m_AnchorMax: {x: 0.55016977, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -893,6 +907,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 391173697}
+  - component: {fileID: 391173699}
   - component: {fileID: 391173696}
   - component: {fileID: 391173698}
   m_Layer: 0
@@ -916,7 +931,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CollisionTag: 
   Event: event:/musics/BGMs/InGame_BGM
-  PlayEvent: 1
+  PlayEvent: 0
   StopEvent: 0
   AllowFadeout: 1
   TriggerOnce: 0
@@ -955,8 +970,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2914766a19345e45b3260eb116d5196, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bgm: {fileID: 391173696}
+  menuBgm: {fileID: 391173699}
+  gameBgm: {fileID: 391173696}
   hype: 0
+--- !u!114 &391173699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 391173695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/musics/BGMs/Menu_BGM
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &405051413
 GameObject:
   m_ObjectHideFlags: 0
@@ -1534,6 +1573,8 @@ MonoBehaviour:
   baseJumpVel: 10
   gravity: 16
   path: event:/musics/Action/Jump
+  fallPath: event:/musics/Action/Dead_Falls
+  upPath: event:/musics/Action/Back
   no_gravity: 0
   control_is_disabled: 0
   slamMultiplier: 1.6
@@ -1954,9 +1995,9 @@ RectTransform:
   m_Father: {fileID: 1851624243}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 5982, y: -896}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 828, y: 1792}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &708024213
@@ -2906,9 +2947,9 @@ RectTransform:
   m_Father: {fileID: 1851624243}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 2270, y: -896}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 828, y: 1792}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &945227507
@@ -3254,9 +3295,9 @@ RectTransform:
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 3}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1128833051
 MonoBehaviour:
@@ -3568,6 +3609,7 @@ GameObject:
   - component: {fileID: 1223506860}
   - component: {fileID: 1223506859}
   - component: {fileID: 1223506858}
+  - component: {fileID: 1223506861}
   m_Layer: 5
   m_Name: Option Button
   m_TagString: Untagged
@@ -3697,6 +3739,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1223506856}
   m_CullTransparentMesh: 0
+--- !u!114 &1223506861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1223506856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff98529f72a9bdc498000f947b414672, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  path: event:/musics/UIs/subButton
 --- !u!1 &1224539914
 GameObject:
   m_ObjectHideFlags: 0
@@ -4000,7 +4055,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1361885446}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2064133793}
+        m_MethodName: Begin
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 391173698}
+        m_MethodName: PlayGameMusic
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1361885446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4390,6 +4467,7 @@ GameObject:
   - component: {fileID: 1481318074}
   - component: {fileID: 1481318073}
   - component: {fileID: 1481318072}
+  - component: {fileID: 1481318075}
   m_Layer: 5
   m_Name: Upgrade Button
   m_TagString: Untagged
@@ -4519,6 +4597,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1481318070}
   m_CullTransparentMesh: 0
+--- !u!114 &1481318075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1481318070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff98529f72a9bdc498000f947b414672, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  path: event:/musics/UIs/subButton
 --- !u!1 &1486134655
 GameObject:
   m_ObjectHideFlags: 0
@@ -4552,9 +4643,9 @@ RectTransform:
   m_Father: {fileID: 1851624243}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 3198, y: -896}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 828, y: 1792}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1486134657
@@ -4606,6 +4697,7 @@ GameObject:
   - component: {fileID: 1539766068}
   - component: {fileID: 1539766067}
   - component: {fileID: 1539766066}
+  - component: {fileID: 1539766069}
   m_Layer: 5
   m_Name: LV Selection
   m_TagString: Untagged
@@ -4712,6 +4804,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1539766064}
   m_CullTransparentMesh: 0
+--- !u!114 &1539766069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1539766064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff98529f72a9bdc498000f947b414672, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  path: event:/musics/UIs/mainButton
 --- !u!1 &1545038721
 GameObject:
   m_ObjectHideFlags: 0
@@ -4860,9 +4965,9 @@ RectTransform:
   m_Father: {fileID: 1851624243}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 5054, y: -896}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 828, y: 1792}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1567943390
@@ -5549,6 +5654,7 @@ GameObject:
   - component: {fileID: 1719179321}
   - component: {fileID: 1719179320}
   - component: {fileID: 1719179319}
+  - component: {fileID: 1719179322}
   m_Layer: 5
   m_Name: Pudding Button
   m_TagString: Untagged
@@ -5678,6 +5784,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1719179317}
   m_CullTransparentMesh: 0
+--- !u!114 &1719179322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1719179317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff98529f72a9bdc498000f947b414672, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  path: event:/musics/UIs/subButton
 --- !u!1 &1741551964
 GameObject:
   m_ObjectHideFlags: 0
@@ -5848,7 +5967,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1826715602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6095,7 +6214,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -0.00048828125, y: -0.0001684761}
-  m_SizeDelta: {x: 3712, y: 300}
+  m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1851624244
 MonoBehaviour:
@@ -6385,6 +6504,7 @@ GameObject:
   - component: {fileID: 1943245341}
   - component: {fileID: 1943245340}
   - component: {fileID: 1943245339}
+  - component: {fileID: 1943245342}
   m_Layer: 5
   m_Name: Play Button
   m_TagString: Untagged
@@ -6514,6 +6634,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1943245337}
   m_CullTransparentMesh: 0
+--- !u!114 &1943245342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1943245337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff98529f72a9bdc498000f947b414672, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  path: event:/musics/UIs/subButton
 --- !u!1 &1988275281
 GameObject:
   m_ObjectHideFlags: 0
@@ -6945,6 +7078,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9d1b04e59f6e344f950a21a8cd0caa7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  menu: {fileID: 1826715601}
   normalBlockPrefab: {fileID: 3742770320322761382, guid: 18b9e915bf840f0418e32fb8157a0250,
     type: 3}
   movingBlockPrefab: {fileID: 6287681065362458692, guid: 5c2fe8baee33df54382367a9a66f7959,
@@ -7260,6 +7394,7 @@ GameObject:
   - component: {fileID: 2121596074}
   - component: {fileID: 2121596073}
   - component: {fileID: 2121596072}
+  - component: {fileID: 2121596075}
   m_Layer: 5
   m_Name: Shop Button
   m_TagString: Untagged
@@ -7389,3 +7524,16 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2121596070}
   m_CullTransparentMesh: 0
+--- !u!114 &2121596075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2121596070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff98529f72a9bdc498000f947b414672, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  path: event:/musics/UIs/subButton

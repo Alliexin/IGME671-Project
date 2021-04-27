@@ -37,6 +37,14 @@ public class PlayerMovement : MonoBehaviour
     public string path;
     EventInstance jumpSound;
 
+    [FMODUnity.EventRef]
+    public string fallPath;
+    EventInstance deathSound;
+
+    [FMODUnity.EventRef]
+    public string upPath;
+    EventInstance respawnSound;
+
     public bool no_gravity;
     public bool control_is_disabled;
 
@@ -68,6 +76,8 @@ public class PlayerMovement : MonoBehaviour
         addForce(new Vector2(0, 800));
 
         jumpSound = RuntimeManager.CreateInstance(path);
+        deathSound = RuntimeManager.CreateInstance(fallPath);
+        respawnSound = RuntimeManager.CreateInstance(upPath);
     }
 
     // Update is called once per frame
@@ -168,6 +178,14 @@ public class PlayerMovement : MonoBehaviour
 
     void Die()
     {
+        deathSound.start();
+        Invoke("SpawnBack", 2f);
+    }
+
+    public void SpawnBack()
+    {
+        respawnSound.start();
+
         vel = Vector2.zero;
         pos = new Vector3(0, CameraMovement.current.transform.position.y - 2, 0);
         transform.position = pos;
